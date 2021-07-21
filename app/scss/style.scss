@@ -48,6 +48,10 @@ body{
         color: $text;
         @extend %mont-500;
         font-size: 16px;
+        padding: 5px 0;
+        &:hover{
+            border-bottom: 1px solid $orange;
+        }
     }
 }
 .logo{
@@ -211,6 +215,112 @@ body{
             letter-spacing: 0.05em;
             opacity: 0.9;
         }
+    }
+}
+
+.service{
+    margin: 72px 0;
+    &__title{
+        color: $text;
+        @extend %mont-400;
+        font-size: 30px;
+        line-height: 36px;
+        text-transform: uppercase;
+        text-align: center;
+        //padding: 0 15px 16px 15px;
+        //border-bottom: 3px solid $orange;
+        margin-bottom: 64px;
+        
+    }
+    .service-tabs{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 70px;
+        &__side{
+            display: flex;
+            flex-direction: column;
+            max-width: 387px;
+            margin-right: 20px;
+            &-decor{
+                width: 386px;
+                height: 177px;
+                margin-bottom: 16px;
+                &.paint{
+                    background-image: url(../images/service/paint.png);
+                }
+                &.build{
+                    background-image: url(../images/service/build.png);
+                }
+                &.elect{
+                    background-image: url(../images/service/electrisity.png)
+                }
+                &.sant{
+                    background-image: url(../images/service/electrisity.png)
+                }
+            }
+            &-item{
+                @extend %mont-400;
+                font-size: 22px;
+                color: $text;
+                width: 386px;
+                height: 177px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &--active{
+                    background-color: rgba(0,0,0, 0.8);
+                    color: $orange;
+                    border: 5px solid $orange;
+                }
+                p{
+                    max-width: 156px;
+                    text-align: center;
+                }
+            }
+        }
+        &__content{
+            width: 590px;
+            height: 753px;
+            background-image: url(../images/service/mainSant.png);
+            &-title{
+                @extend %mont-400;
+                font-size: 22px;
+                color: $orange;
+                text-align: center;
+                margin-bottom: 48px;
+            }
+            &-point{
+                @extend %mont-400;
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 15px;
+            }
+        }
+        &__content-item{
+            padding: 43px 33px 90px 103px;
+            color: $text;
+            display: none;
+            &.service-tabs__content-item--active{
+                display: block;
+            }
+        }
+    }
+    &__bottom-text{
+        color: $text;
+        @extend %mont-400;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 3px;
+        margin-bottom: 50px;
+    }
+    &__bottom-promo{
+        color: $orange;
+        @extend %mont-700;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: 3px;
+        margin-bottom: 50px;
+        text-align: center;
     }
 }
 
